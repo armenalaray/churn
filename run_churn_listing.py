@@ -615,6 +615,7 @@ if __name__ == "__main__":
     os.environ['CHURN_DB'] = "churn"
     os.environ['CHURN_DB_USER'] = "postgres"
     os.environ['CHURN_DB_PASS'] = "alejandro"
+    os.environ['CHURN_OUT_DIR'] = "C:\\Users\\armen\\churn"
 
     args, _ = parser.parse_known_args()
     run_churn_listing_from_args(args)
