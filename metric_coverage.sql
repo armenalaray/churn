@@ -26,8 +26,8 @@ WITH
 SELECT
 	--el avg metric value para ese rango de tiempo
 	METRIC_NAME,
-	COUNT(DISTINCT M.ACCOUNT_ID) AS COUNT_WITH_METRIC,
 	N_ACCOUNT,
+	COUNT(DISTINCT M.ACCOUNT_ID) AS COUNT_WITH_METRIC,
 	(COUNT(DISTINCT M.ACCOUNT_ID))::FLOAT / N_ACCOUNT::FLOAT AS PCNT_WITH_METRIC,
 	--este es de todos no de los distintos  
 	--las metricas que estan en el rango de tiempo
@@ -36,7 +36,6 @@ SELECT
 	MAX(METRIC_VALUE),
 	MIN(METRIC_TIME),
 	MAX(METRIC_TIME)
-	--select *
 FROM
 	--esta evento paso en esta subscripcion
 	METRIC M
